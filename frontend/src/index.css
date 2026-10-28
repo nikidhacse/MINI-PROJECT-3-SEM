@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F8F7FF;
+    color: #2D1B69;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Custom scrollbars: 8px, track #F3F0FF, thumb #C4B5FD rounded full, hover #8B5CF6 */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F3F0FF;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C4B5FD;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8B5CF6;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #E9D5FF;
+  }
+
+  .glass-nav {
+    background-color: rgba(248, 247, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(233, 213, 255, 0.6);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-lavender-bg {
+    background: linear-gradient(135deg, #F8F7FF 0%, #F3F0FF 50%, #EDE9FE 100%);
+  }
+
+  .card-hover {
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 32px -8px rgba(139, 92, 246, 0.18), 0 8px 16px -4px rgba(45, 27, 105, 0.06);
+  }
+}
